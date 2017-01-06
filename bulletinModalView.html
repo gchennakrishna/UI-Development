@@ -1,0 +1,15 @@
+<div class="modal-header">
+	<div translate="svb.notifications.bulletins"></div>
+	<a class="close-button pull-right x-button-image" ng-click="$close()"></a>
+</div>
+<div class="modal-body">
+	<div ng-if="bulletins.length > 0" svb-collapsible-list items="bulletins"></div>
+	<div ng-if="bulletins.length === 0">
+		<div class="error-icon pull-left">!</div>
+		<div class="error-body">
+			<div svb-compile="reloadLink"></div>
+			<div translate="svb.notifications.clientServices"></div>
+		</div>
+	</div>
+	<div ng-show="loading" class="modal-loading-mask"></div>
+</div>
